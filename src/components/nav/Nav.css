@@ -1,0 +1,26 @@
+.nav-links {
+  background-color: black;
+  overflow: hidden;
+}
+
+.nav-links a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-links a:active {
+  background-color: #0b5ed7;
+  color: white;
+}
+
+.nav-links a.split {
+  float: right;
+}

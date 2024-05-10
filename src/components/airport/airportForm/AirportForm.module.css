@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_item {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #1e90ff;;
+}

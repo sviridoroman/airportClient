@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.signin_form {
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.form_item {
+  justify-content: center;
+}
+.form_item h1 {
+  text-transform: uppercase;
+}
+
+.form_item label {
+  display: block;
+}
+
+.form_input {
+  margin-bottom: 0.5em;
+}
