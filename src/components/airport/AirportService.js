@@ -15,7 +15,7 @@ export default class AirportService {
   }
 
   static async postAirport(state) {
-    await fetch(`http://localhost:8080/airport`, {
+    const req = await fetch(`http://localhost:8080/airport`, {
       method: "POST",
       body: JSON.stringify(state),
       headers: {
@@ -23,6 +23,10 @@ export default class AirportService {
         "Authorization": "Bearer " + localStorage.getItem("token")
       }
     })
+    if (req.ok) {
+      const res = await req.json();
+      return res;
+    }
   }
 
   static async deleteAirport(airportId) {
