@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
-import AirportService from "./AirportService";
 import { useNavigate, useParams } from "react-router-dom";
 import AirportForm from "./airportForm/AirportForm";
+import { useDispatch } from "react-redux";
+import { editAirport, fetchAirports } from "../../store/airportSlice";
 
 const UpdateComponent = () => {
 
+  const dispatch = useDispatch();
+
   const params = useParams();
   const navigate = useNavigate();
+
   const [airport, setAirport] = useState({
     name:"",
     city:"",
@@ -14,16 +18,15 @@ const UpdateComponent = () => {
   });
 
   useEffect(() => {
-    async function fetchData() {
-      setAirport(await AirportService.getAirport(params.airportId))
-    }
-    fetchData();
+    dispatch(fetchAirports())
+      .unwrap()
+      .then(airports => setAirport(airports.find((airport) => airport.id == params.airportId)));
   },[]);
 
   const updateAirport = async(e) => {
     e.preventDefault();
-    await AirportService.putAirport(params.airportId, airport);
-    navigate("/airport");
+    dispatch(editAirport(airport));
+    navigate("/airport")
   }
 
   return (
