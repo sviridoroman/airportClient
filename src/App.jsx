@@ -9,6 +9,8 @@ import SignUp from './components/signup/Signup'
 import SignIn from './components/signin/Signin'
 import AirportComponent from './components/airport/AirportComponent'
 import UpdateComponent from './components/airport/UpdateComponent'
+import FlightComponent from './components/flight/FlightComponent'
+import UpdateFlight from './components/flight/UpdateFlight'
 
 function App() {
 
@@ -34,7 +36,15 @@ function App() {
     {
       path: "airport/:airportId",
       element: <UpdateComponent/>
-    }
+    },
+    {
+      path: "flight",
+      element: <FlightComponent/>
+    },
+    {
+      path: "flight/:flightId",
+      element: <UpdateFlight/>
+    },
   ]);
 
   return (
