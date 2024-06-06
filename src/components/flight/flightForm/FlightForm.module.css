@@ -1,0 +1,25 @@
+.form_component {
+  width: min-content;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form_item {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_item:last-of-type {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.form_item input[type="text"]:focus {
+  border: 3px solid #1e90ff;;
+}

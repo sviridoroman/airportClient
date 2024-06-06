@@ -30,6 +30,11 @@ const Nav = ({loggedIn, setLoggedIn}) => {
           <a href="/airport">airport</a>
           : null
         }
+                {
+          loggedIn == true ?
+          <a href="/flight">flight</a>
+          : null
+        }
         {
           loggedIn == true ?
           <a onClick={logout} href="/" className='split'>Logout</a>

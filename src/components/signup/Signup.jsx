@@ -1,5 +1,6 @@
 import { useState } from "react";
 import cl from "./Signup.module.css";
+import ButtonSubmit from "../button/buttonSubmit/ButtonSubmit";
 const SignUp = () => {
 
   const [state, setState] = useState({
@@ -47,7 +48,7 @@ const SignUp = () => {
           </div>
         </div>
         <div className={cl.form_item}>
-          <button type="submit">Submit</button>
+          <ButtonSubmit>Sing up</ButtonSubmit>
         </div>
       </form>
     </div>

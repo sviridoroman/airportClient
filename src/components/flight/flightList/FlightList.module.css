@@ -1,0 +1,31 @@
+.airportTable {
+  border-collapse: collapse;
+}
+
+.airportTable thead {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.airportTable th {
+  &:first-child {
+    border-top-left-radius: 10px;
+  }
+  &:last-child {
+    border-top-right-radius: 10px;
+  }
+}
+
+.airportTable th, td {padding: 0.5rem;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.airportTable tr:hover {
+  background-color: #cdcdcd;
+}
+
+.airportTable td:last-of-type {
+  text-align: center;
+}

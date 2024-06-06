@@ -1,8 +1,9 @@
 import { useId, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import cl from "./Signin.module.css";
+import ButtonSubmit from "../button/buttonSubmit/ButtonSubmit";
 
-const SignIn = ({loggedIn, setLoggedIn}) => {
+const SignIn = ({setLoggedIn}) => {
 
   const emailInput = useId();
   const passwordInput = useId();
@@ -51,7 +52,7 @@ const SignIn = ({loggedIn, setLoggedIn}) => {
               </div>
             </div>
             <div className={cl.form_item}>
-              <button className={cl.signin_button} type="submit">Sign In</button>
+              <ButtonSubmit>Sign In</ButtonSubmit>
             </div>  
           </form>
       </div>
