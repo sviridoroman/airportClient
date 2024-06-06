@@ -24,24 +24,24 @@ export const getFlightById = createAsyncThunk(
 
 export const createFlight = createAsyncThunk(
   'flights/create',
-  async (airport) => {
-    const responce = await FligtService.postFlight(airport);
+  async (flight) => {
+    const responce = await FligtService.postFlight(flight);
     return responce;
   }
 );
 
 export const deleteFlight = createAsyncThunk(
   'flights/deleteById',
-  async (airportId) => {
-    await FligtService.deleteFlight(airportId);
-    return airportId;
+  async (flightId) => {
+    await FligtService.deleteFlight(flightId);
+    return flightId;
   }
 );
 
 export const editFlight = createAsyncThunk(
   'flights/editById',
-  async (airport) => {
-    const responce = await FligtService.putFlight(airport.id, airport);
+  async (flight) => {
+    const responce = await FligtService.putFlight(flight.id, flight);
     return responce;
   }
 );
